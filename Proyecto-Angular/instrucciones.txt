@@ -1,0 +1,3 @@
+tendras que abrir el api y instalarla en tu maquina para que pueda funcionar correctamente 
+
+Saludos 

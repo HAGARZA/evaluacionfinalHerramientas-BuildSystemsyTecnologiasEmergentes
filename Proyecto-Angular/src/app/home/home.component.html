@@ -1,0 +1,25 @@
+<div class="main-container">
+  <div class="container">
+    <div class="row">
+      <t-barra-superior></t-barra-superior>
+      <cart class="btn-cart"></cart>
+      <div class="col-12">
+        <div class="row">
+          <div class="col-8">
+            <div class="sort-filters-wrapper">
+              <sort-filters [filters]='sortFilters' (onSortChange)='sortProducts($event)'></sort-filters>
+            </div>
+          </div>
+          <div class="col-4">
+            <search-bar  #searchComponent (onSearchChange)='onSearchChange($event)'></search-bar>
+          </div>
+        </div>
+        <div class="row" style="z-index:2;">
+          <div class="col-12 tam-productos">
+            <showcase [products]='products'></showcase>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

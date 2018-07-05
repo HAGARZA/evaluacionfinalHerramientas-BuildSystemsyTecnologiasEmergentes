@@ -1,0 +1,31 @@
+<div class="fondo">
+  <div class="container">
+      <div class="row">
+
+          <div class="col s6 offset-s3 z-depth-1" id="panell">
+            <h5 id="title">Iniciar session</h5>
+            <form #formlogin="ngForm" (ngSubmit)="onSubmit(formlogin)">
+
+            <div class="input-field" id="username">
+              <input  type="text" name="user" class="validate inp-username" #user="ngModel" [(ngModel)]="txt_user"required />
+              <label for="user" class="username">Usuario</label>
+              <br>
+              <span *ngIf="user.touched && !user.valid" class="span">
+                El usuario es Obligatorio
+                </span>
+          </div>
+          <div class="input-field" id="password">
+            <input  type="password" name="passw" class="validate inp-password" #passw="ngModel" [(ngModel)]="txt_passw" required/>
+            <label for="passw" class="password">Contraseña</label>
+        </div>
+        <input class="waves-light btn" type="submit" value="Ingresar" [disabled]="!formlogin.form.valid">
+
+        </form>
+
+
+
+        </div>
+      </div>
+
+  </div>
+</div>
